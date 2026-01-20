@@ -38,8 +38,7 @@
                         <td class="px-6 py-4 text-sm text-gray-200">{{ $teacher["email"] }}</td>
                          <td class="px-6 py-4 text-sm text-gray-200">{{ $teacher["address"] }}</td>
                         </tr>
-
-                           @endforeach
+                        @endforeach
                         </tbody>
                     </table>
                 </div>

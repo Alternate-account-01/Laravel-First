@@ -1,6 +1,6 @@
-<div style="color: white;">
-<x-layout >
+<x-layout>
     <x-slot:judul>{{$title}}</x-slot:judul>
-    <h3>this is the home</h3>
+    <div style="color: white;">
+        <h3>this is the home</h3>
+    </div>
 </x-layout>
-</div>

@@ -16,20 +16,9 @@ class SubjectFactory extends Factory
      */
     public function definition(): array
     {
-        $subjects = [
-            'Mobile Development' => 'A Very Fun Subject',
-            'Web Development' => 'Mediocre At Best',
-            'Game Development' => 'The Teacher In This Subject Is Amazing',
-            'Internet Of Things' => 'You Learn Alot From This Subject',
-            'English' => 'Teaches You Very Good Hard and Soft Skills',
-            'Mathamatics' => 'Absolute',
-        ];
-
-        $name = fake()->randomElement(array_keys($subjects));
-
         return [
-            'name' => $name,
-            'description' => $subjects[$name],
+            'name' => $this->faker->unique()->word(),
+            'description' => $this->faker->sentence(),
         ];
     }
 }

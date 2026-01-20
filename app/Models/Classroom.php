@@ -13,6 +13,7 @@ class Classroom extends Model
     protected $table = 'classrooms';
     protected $fillable = ['name'];
 
+
     public function students()
     {
         return $this->hasMany(Student::class, 'classroom_id');

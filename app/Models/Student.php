@@ -12,7 +12,14 @@ class Student extends Model
 
     protected $table = 'students';
 
-
+    protected $with = ['classroom'];
+    protected $fillable = [
+        'nama',
+        'date_of_birth',
+        'classroom_id',
+        'email',
+        'address',
+    ];
     public function classroom()
     {
         return $this->belongsTo(Classroom::class, 'classroom_id');

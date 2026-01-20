@@ -9,4 +9,11 @@ class Guardian extends Model
 {
     /** @use HasFactory<\Database\Factories\GuardianFactory> */
     use HasFactory;
+    protected $fillable = [
+        'nama',
+        'job',
+        'phone_number',
+        'email',
+        'address',
+    ];
 }

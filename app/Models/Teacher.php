@@ -9,9 +9,18 @@ class Teacher extends Model
 {
     /** @use HasFactory<\Database\Factories\TeacherFactory> */
     use HasFactory;
+    
+    protected $with = ['subject'];
+    protected $fillable = [
+        'name',
+        'subject_id',
+        'phone_number',
+        'email',
+        'address',
+    ];
 
-    public function subjects()
+    public function subject()
     {
-        return $this->belongsTo(Subject::class,'subject_id');
+        return $this->belongsTo(Subject::class, 'subject_id');
     }
 }
